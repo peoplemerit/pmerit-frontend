@@ -19,7 +19,7 @@ function FileUpload() {
     }
 
     try {
-      const response = await axios.post(`http://localhost:5000${endpoint}`, formData, {
+      const response = await axios.post(`https://pmerit-backend.onrender.com${endpoint}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

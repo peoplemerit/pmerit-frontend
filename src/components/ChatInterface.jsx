@@ -15,10 +15,10 @@ function ChatInterface() {
     setUserInput("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/chat", {
-        message: newMessage.text,
-      });
-
+	  const response = await axios.post("https://pmerit-backend.onrender.com/api/chat", {
+		message: newMessage.text,
+		});
+		
       setMessages((prev) => [...prev, { text: response.data.response, sender: "ai" }]);
     } catch (error) {
       console.error(error);
